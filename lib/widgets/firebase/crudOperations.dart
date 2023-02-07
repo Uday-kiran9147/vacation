@@ -7,15 +7,14 @@ class DataBase extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Database")),
-      body: Container(
-          child: Column(
+      body: Column(
         children: [
-          ElevatedButton(onPressed: () {}, child: Text('create')),
-          ElevatedButton(onPressed: () {}, child: Text('retrive')),
-          ElevatedButton(onPressed: () {}, child: Text('Update')),
-          ElevatedButton(onPressed: () {}, child: Text('Delete')),
+      ElevatedButton(onPressed: () {}, child: const Text('create')),
+      ElevatedButton(onPressed: () {}, child: const Text('retrive')),
+      ElevatedButton(onPressed: () {}, child: const Text('Update')),
+      ElevatedButton(onPressed: () {}, child: const Text('Delete')),
         ],
-      )),
+      ),
     );
   }
 }
