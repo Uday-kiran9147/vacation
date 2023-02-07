@@ -21,8 +21,6 @@ import 'firebase_options.dart';
 import 'widgets/geolocator.dart';
 import 'widgets/ui.dart';
 // import 'package:firebase_core/firebase_core.dart';
-
-//you will find different widgets in different in the modules.
 //for future use.
 void main()  {
   // WidgetsFlutterBinding.ensureInitialized();
