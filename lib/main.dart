@@ -16,20 +16,15 @@ import 'package:vacationvproject/widgets/snackbar.dart';
 import 'package:vacationvproject/widgets/stack.dart';
 import 'package:vacationvproject/widgets/tabbar.dart';
 
+import 'bloc/main.dart';
 import 'calci.dart';
 import 'firebase_options.dart';
 import 'widgets/geolocator.dart';
 import 'widgets/ui.dart';
-// import 'package:firebase_core/firebase_core.dart';
 
-//you will find different widgets in different in the modules.
-//for future use.
-void main()  {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
-  runApp(MyApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(Bloc());
 }
 
 class MyApp extends StatefulWidget {
@@ -43,14 +38,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        // debugShowCheckedModeBanner: bool.fromEnvironment('name'),
         theme:
             ThemeData(brightness: Brightness.dark, primaryColor: Colors.cyan),
-        home:
-        const ProviderHome()
+        home: const ProviderHome()
         //MyApp2()
-            //DataBase()
-          //  EmailAuthentication()
+        //DataBase()
+        //  EmailAuthentication()
         // RandomUI(),
         //GeoLacation_Widget()
         //  ImagePicker_Widget()
