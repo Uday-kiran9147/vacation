@@ -5,7 +5,7 @@ class RandomUI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var h = MediaQuery.sizeOf(context).height;
+    var h = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
         child: SingleChildScrollView(
