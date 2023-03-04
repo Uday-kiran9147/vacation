@@ -9,18 +9,20 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SafeArea(
-      child: Center(child: BlocBuilder<InterNetBloc, InterNetState>(
-        builder: (context, state) {
-          if (state is InterNetLossState) {
-            return Text('Internet Lost');
-          } else if (state is InterNetGainState) {
-            return Text("internet Connected !");
-          } else {
-            return Text("Loading...");
-          }
-        },
-      )),
-    ));
+    return Scaffold(
+      body: SafeArea(
+        child: Center(child: BlocBuilder<InterNetBloc, InterNetState>(
+          builder: (context, state) {
+            if (state is InterNetLossState) {
+              return Text('Internet Lost');
+            } else if (state is InterNetGainState) {
+              return Text("internet Connected !");
+            } else {
+              return Text("Loading...");
+            }
+          },
+        )),
+      ),
+    );
   }
 }
