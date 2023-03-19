@@ -10,7 +10,7 @@ class MyAp extends StatelessWidget {
       new User(name: "uday kiran", age: 20, email: "Udaykiran91@gmail.com");
 
   String jsondata =
-      // while writing json files throw keyboard do not pass int as a string format
+      // while writing json files through keyboard do not pass int as a string format
       /* 
         Ex:  int age = 20
               Right--> '{"age" : 20 }'  !=      '{"age" : "20" }'   <-- wrong  */
@@ -28,7 +28,7 @@ class MyAp extends StatelessWidget {
               ElevatedButton(
                   onPressed: () {
                     Map<String, dynamic> map = obj.tomap();
-                    var json = jsonEncode(map);
+                    var json = jsonEncode(map); //converts map into json
                     print(json); // endoded to json
                   },
                   child: Text("serialization")),
@@ -40,7 +40,7 @@ class MyAp extends StatelessWidget {
                     var decode = jsonDecode(jsondata);
                     Map<String, dynamic> mapp = decode;
                     User.fromMap(mapp);
-                    print(mapp.toString());
+                    print(mapp.toString()); // decoded JSON ---> Object
                   },
                   child: Text("De-serialization"))
             ],

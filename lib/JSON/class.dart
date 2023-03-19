@@ -9,13 +9,15 @@ class User {
     required this.email,
   });
 
-//map to object
+// fromMap converts map to --> object.  
   User.fromMap(Map<String, dynamic> mymap) {
     this.name = mymap["name"];
     this.age = mymap["age"];
     this.email = mymap["email"];
   }
-
+   //JSON stands for JavaScript Object Notation
+   
+   // To map function.
   Map<String, dynamic> tomap(){
     return {
       "name": this.name,
