@@ -53,10 +53,13 @@ dependencies:
   flutter_bloc: ^8.1.2
   connectivity: ^3.0.6
   cloud_firestore: ^4.4.5
+  built_value: ^8.4.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  json_serializable: ^6.6.1
+  build_runner: ^2.3.3
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
