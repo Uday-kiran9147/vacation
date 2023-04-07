@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "587179209077",
+    "firebase_url": "https://ninja-5cdbe-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ninja-5cdbe",
+    "storage_bucket": "ninja-5cdbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587179209077:android:717035904e16f9bf5e633c",
+        "android_client_info": {
+          "package_name": "com.example.project2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "587179209077-72r8ri3dn1vd8mpun69gnndkb0tetjo6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-TO41QT9ctVLeC8M0ATg0BEcRZwfnv9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "587179209077-72r8ri3dn1vd8mpun69gnndkb0tetjo6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587179209077:android:30f9e625fd69f0755e633c",
+        "android_client_info": {
+          "package_name": "com.example.vacationvproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "587179209077-72r8ri3dn1vd8mpun69gnndkb0tetjo6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-TO41QT9ctVLeC8M0ATg0BEcRZwfnv9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "587179209077-72r8ri3dn1vd8mpun69gnndkb0tetjo6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
