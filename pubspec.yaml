@@ -54,6 +54,7 @@ dependencies:
   cloud_firestore: ^4.4.5
   built_value: ^8.4.4
   fancy_containers: ^0.0.5
+  google_fonts: ^4.0.4
 
 dev_dependencies:
   flutter_test:
