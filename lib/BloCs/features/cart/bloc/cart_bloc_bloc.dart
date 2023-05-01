@@ -1,13 +1,26 @@
+import 'dart:async';
+
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:vacationvproject/BloCs/data/cart.dart';
+import 'package:vacationvproject/BloCs/features/home/ui/models/homeproductdata.dart';
 
 part 'cart_bloc_event.dart';
 part 'cart_bloc_state.dart';
 
-class CartBlocBloc extends Bloc<CartBlocEvent, CartBlocState> {
-  CartBlocBloc() : super(CartBlocInitial()) {
-    on<CartBlocEvent>((event, emit) {
-      // TODO: implement event handler
-    });
+class CartBloc extends Bloc<CartEvent, CartState> {
+  CartBloc() : super(CartInitialState()) {
+    on<CartInitialEvent>(cartInitialEvent);
+    on<CartRemoveFromCart>(cartRemoveFromCart);
+  }
+  //FutureOr no need to write async in function body.
+  FutureOr<void> cartInitialEvent(
+      CartInitialEvent event, Emitter<CartState> emit) {
+    emit(CartSuccessState(cartItems: cartlistItems));
+  }
+
+  FutureOr<void> cartRemoveFromCart(CartRemoveFromCart event, Emitter<CartState> emit) {
+    cartlistItems.remove(event.selectedItemToRemove);
+    emit(CartSuccessState(cartItems: cartlistItems));
   }
 }

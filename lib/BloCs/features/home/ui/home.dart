@@ -55,12 +55,12 @@ class _HomeState extends State<Home> {
             return Scaffold(
               body: Center(child: CircularProgressIndicator()),
             );
-            break;
+            // break;
           case HomeLoadedSuccessState:
             final homeLoadedSuccessState = state as HomeLoadedSuccessState;
             return Scaffold(
               appBar: AppBar(
-                backgroundColor: Colors.yellow,
+                backgroundColor: Colors.blueGrey,
                 title: Text('Uday\'s Grocery'),
                 actions: [
                   IconButton(

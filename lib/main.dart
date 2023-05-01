@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:vacationvproject/BloCs/start.dart';
 
 import 'UI/gymstore.dart';
+import 'UI/wallet.dart';
 import 'widgets/stack.dart';
 void main() async {
 
-  runApp(GymStore());
+  runApp(BloCHome());
 }
 
 class MyApp extends StatefulWidget {

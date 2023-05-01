@@ -1,5 +1,5 @@
-class InterNetEvent{}
+// class InterNetEvent{}
 
-class InterNetLostEvent extends InterNetEvent{}
+// class InterNetLostEvent extends InterNetEvent{}
 
-class InterNetGainedEvent extends InterNetEvent{}
+// class InterNetGainedEvent extends InterNetEvent{}

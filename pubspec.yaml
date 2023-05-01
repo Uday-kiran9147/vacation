@@ -49,12 +49,14 @@ dependencies:
   firebase_core: ^2.4.1
   firebase_auth: ^4.2.5
   provider: ^6.0.5
-  flutter_bloc: ^8.1.2
   connectivity: ^3.0.6
   cloud_firestore: ^4.4.5
   built_value: ^8.4.4
   fancy_containers: ^0.0.5
   google_fonts: ^4.0.4
+  bloc:
+  flutter_bloc: ^8.1.2
+
 
 dev_dependencies:
   flutter_test:
