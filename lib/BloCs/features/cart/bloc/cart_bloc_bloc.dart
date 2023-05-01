@@ -11,7 +11,7 @@ part 'cart_bloc_state.dart';
 class CartBloc extends Bloc<CartEvent, CartState> {
   CartBloc() : super(CartInitialState()) {
     on<CartInitialEvent>(cartInitialEvent);
-    on<CartRemoveFromCart>(cartRemoveFromCart);
+    on<CartRemoveFromCartEvent>(cartRemoveFromCart);
   }
   //FutureOr no need to write async in function body.
   FutureOr<void> cartInitialEvent(
@@ -19,7 +19,8 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     emit(CartSuccessState(cartItems: cartlistItems));
   }
 
-  FutureOr<void> cartRemoveFromCart(CartRemoveFromCart event, Emitter<CartState> emit) {
+  FutureOr<void> cartRemoveFromCart(
+      CartRemoveFromCartEvent event, Emitter<CartState> emit) {
     cartlistItems.remove(event.selectedItemToRemove);
     emit(CartSuccessState(cartItems: cartlistItems));
   }

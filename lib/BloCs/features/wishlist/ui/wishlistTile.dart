@@ -2,18 +2,18 @@
 import 'package:flutter/material.dart';
 
 import 'package:vacationvproject/BloCs/features/home/ui/models/homeproductdata.dart';
+import 'package:vacationvproject/BloCs/features/wishlist/bloc/wishlist_bloc_bloc.dart';
 
-import '../bloc/cart_bloc_bloc.dart';
 
-class CartItem extends StatelessWidget {
-  CartItem({
+class WishlistItem extends StatelessWidget {
+  WishlistItem({
     Key? key,
     required this.productDataModel,
-    required this.cartBloc,
+    required this.wishlistBloc,
   }) : super(key: key);
   final ProductDataModel productDataModel;
 
-  final CartBloc cartBloc;
+  final WishlistBloc wishlistBloc;
 
   @override
   Widget build(BuildContext context) {
@@ -51,17 +51,12 @@ class CartItem extends StatelessWidget {
               children: [
                 IconButton(
                     onPressed: () {
-                      // cartBloc.add(HomeProductWishlistButtonClickedEvent(
-                      //     clickedProduct: productDataModel));
+                 wishlistBloc.add(WishlistremoveFromListEvent(selectedItemToRemove: productDataModel));
                     },
-                    icon: Icon(Icons.favorite_border_outlined)),
+                    icon: Icon(Icons.favorite)),
                 IconButton(
                     onPressed: () {
-                      cartBloc.add(CartRemoveFromCartEvent(selectedItemToRemove: productDataModel));
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                        content: Text("${productDataModel.name} removed from cart"),
-                        duration: Duration(seconds: 1),
-                      ));
+                      
                     },
                     icon: Icon(Icons.shopping_cart))
               ],

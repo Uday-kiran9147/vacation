@@ -6,9 +6,9 @@ abstract class CartEvent {}
 
 class CartInitialEvent extends CartEvent {}
 
-class CartRemoveFromCart extends CartEvent {
+class CartRemoveFromCartEvent extends CartEvent {
   final ProductDataModel selectedItemToRemove;
-  CartRemoveFromCart({
+  CartRemoveFromCartEvent({
     required this.selectedItemToRemove,
   });
 }
