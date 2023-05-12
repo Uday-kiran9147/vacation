@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'package:vacationvproject/BloCs/features/home/ui/models/homeproductdata.dart';
 
-import '../../../data/grocerydata.dart';
 
 @immutable
 abstract class HomeEvent {}
