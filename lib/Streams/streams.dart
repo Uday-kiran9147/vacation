@@ -91,6 +91,9 @@ class _StreamsExampleState extends State<StreamsExample> {
             width: MediaQuery.of(context).size.height * 0.3,
             child: TextFormField(
               controller: _textEditingController,
+              onChanged: (value) {
+                _streamController.sink.add(_textEditingController.text);
+              },
             ),
           ),
           Padding(
