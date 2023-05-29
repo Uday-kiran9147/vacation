@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:vacationvproject/BloCs/start.dart';
+import 'package:vacationvproject/Streams/streams.dart';
 
 import 'UI/gymstore.dart';
 import 'UI/wallet.dart';
 import 'widgets/stack.dart';
-void main() async {
 
-  runApp(BloCHome());
+void main() async {
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -20,10 +21,10 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false,
         // theme:
         //     ThemeData(brightness: Brightness.light, primaryColor: Colors.cyan),
-        home: //GymStore()
+        home: StreamsExample() //GymStore()
         // const ProviderHome()
         //MyApp2()
         //DataBase()
@@ -32,7 +33,7 @@ class _MyAppState extends State<MyApp> {
         //GeoLacation_Widget()
         //  ImagePicker_Widget()
         // TabBar_Widget()
-        Stack_Widget()
+        // Stack_Widget()
         // Form_Widget()
         // Dropdown_Widget()
         // AnimatedText_Widget()
