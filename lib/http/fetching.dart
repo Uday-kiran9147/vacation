@@ -51,12 +51,12 @@ class _FetchdataState extends State<Fetchdata> {
                 future: futureAlbum,
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
-                    return Text('${snapshot.data!.title}');
+                    return Text(snapshot.data!.title);
                   } else if (snapshot.hasError) {
                     print(snapshot.error);
                     return Text('${snapshot.error}');
                   }
-                  return CircularProgressIndicator();
+                  return const CircularProgressIndicator();
                 },
               ),
             )));

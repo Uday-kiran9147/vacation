@@ -9,43 +9,44 @@ class Dropdown_Widget extends StatefulWidget {
 
 class _Dropdown_WidgetState extends State<Dropdown_Widget> {
   String dropdownvalue = "";
+
+  List<String> items = <String>["orange", "Apple", "Banana", "papaya"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(title: Text("DropdownList")),
+        appBar: AppBar(title: const Text("DropdownList")),
         body: Column(
           children: [
             Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 color: Colors.white,
                 height: 100,
                 width: MediaQuery.of(context).size.width,
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 child: DropdownButton<String>(
                   isExpanded: true,
-                  iconSize: 50, borderRadius: BorderRadius.circular(15),
-                  hint: Text("Select fruit"),
+                  iconSize: 50,
+                  borderRadius: BorderRadius.circular(15),
+                  hint: const Text("Select fruit"),
                   value: dropdownvalue,
-
                   onChanged: (String? newvalue) {
                     setState(() {
                       //  " ! " is a null Saftey
                       dropdownvalue = newvalue!;
                     });
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_downward_sharp,
                     color: Colors.green,
                   ),
-                  items: <String>["orange", "Apple", "Banana", "papaya"]
-                      .map<DropdownMenuItem<String>>((String value) {
+                  items: items.map<DropdownMenuItem<String>>((String fruit) {
                     return DropdownMenuItem(
                         alignment: Alignment.center,
-                        value: value,
+                        value: fruit,
                         child: Text(
-                          value,
-                          style: TextStyle(color: Colors.green),
+                          fruit,
+                          style: const TextStyle(color: Colors.green),
                         ));
                   }).toList(),
                 )),

@@ -8,7 +8,7 @@ class Drawer_widget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Drawer"),
+        title: const Text("Drawer"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -23,25 +23,25 @@ class Drawer_widget extends StatelessWidget {
                       image: imageProvider,
                       fit: BoxFit.cover,
                       colorFilter:
-                          ColorFilter.mode(Colors.red, BlendMode.colorBurn)),
+                          const ColorFilter.mode(Colors.red, BlendMode.colorBurn)),
                 ),
               ),
-              placeholder: (context, url) => CircularProgressIndicator(),
-              errorWidget: (context, url, error) => Icon(Icons.error),
+              placeholder: (context, url) => const CircularProgressIndicator(),
+              errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 70,
           ),
           Center(
             child: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(blurRadius: 10, blurStyle: BlurStyle.solid)
                   ],
                   color: Colors.purple,
-                  image: DecorationImage(
+                  image: const DecorationImage(
                       fit: BoxFit.fitWidth,
                       image: NetworkImage(
                           'https://play-lh.googleusercontent.com/7Ac5TgaL15Ra4bvFVHJKCdJp4qvnL4djZj5bKc6RN-MZjzrvkeHbJytek0NPTSdZcp8'))),
@@ -59,11 +59,12 @@ class Drawer_widget extends StatelessWidget {
             DrawerHeader(
                 padding: EdgeInsets.zero,
                 child: Container(
-                  child: Column(
+                  color: const Color.fromARGB(255, 19, 95, 22),
+                  child: const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: CircleAvatar(
                             backgroundImage: NetworkImage(
                                 "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"),
@@ -71,19 +72,18 @@ class Drawer_widget extends StatelessWidget {
                           ),
                         ),
                       ]),
-                  color: Color.fromARGB(255, 19, 95, 22),
                   // padding: EdgeInsets.zero,
                 )
                 //   CircleAvatar()
                 ),
-            Card(
+            const Card(
               elevation: 5,
               child: ListTile(
                 leading: Icon(Icons.folder),
                 tileColor: Colors.orange,
               ),
             ),
-            Card(
+            const Card(
               elevation: 5,
               child: ListTile(
                 leading: Icon(Icons.folder),

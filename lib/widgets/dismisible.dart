@@ -20,8 +20,7 @@ class _Dismissible_WidgetState extends State<Dismissible_Widget> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Text("Dismissable widget"),
+          title: const Text("Dismissable widget"),
         ),
         body: ListView.builder(
             itemCount: listname.length,
@@ -36,19 +35,19 @@ class _Dismissible_WidgetState extends State<Dismissible_Widget> {
                 onDismissed: (direction) {
                   if (direction == DismissDirection.startToEnd) {
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                        duration: Duration(milliseconds: 2000),
+                        duration: const Duration(milliseconds: 2000),
                         backgroundColor: Colors.red,
                         content: Text(listname[index])));
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                        duration: Duration(milliseconds: 2000),
+                        duration: const Duration(milliseconds: 2000),
                         backgroundColor: Colors.green,
                         content: Text(listname[index])));
                   }
                 },
                 key: Key(listname[index]),
                 child: Card(
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   child: ListTile(
                     title: Text(listname[index]),
                   ),

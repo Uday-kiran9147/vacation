@@ -21,7 +21,7 @@ class _API_ScreenState extends State<API_Screen> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('API'),
+          title: const Text('API'),
           backgroundColor: Colors.grey,
         ),
         body: Container(

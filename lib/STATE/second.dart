@@ -6,6 +6,8 @@ import 'list_provider.dart';
 
 
 class Second extends StatefulWidget {
+  const Second({super.key});
+
   @override
   State<Second> createState() => _SecondState();
 }
@@ -35,7 +37,7 @@ class _SecondState extends State<Second> {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  child: Text("Second"))
+                  child: const Text("Second"))
             ],
           ),
         ),

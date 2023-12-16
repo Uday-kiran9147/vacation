@@ -6,7 +6,7 @@ class DataBase extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Database")),
+      appBar: AppBar(title: const Text("Database")),
       body: Column(
         children: [
       ElevatedButton(onPressed: () {}, child: const Text('create')),

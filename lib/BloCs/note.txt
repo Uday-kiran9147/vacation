@@ -1,0 +1,8 @@
+bloc
+event
+state
+
+1. intistate to load data
+2. bloc parameter to BlocConsumer
+3. emit state for given events
+4. 

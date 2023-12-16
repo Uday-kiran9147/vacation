@@ -9,6 +9,8 @@ class Form_Widget extends StatelessWidget {
   String email = '';
   String password = '';
 
+  Form_Widget({super.key});
+
   trySubmit() {
     final isvalid = _formkey.currentState!.validate();
     if (isvalid) {
@@ -32,17 +34,17 @@ class Form_Widget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Form"),
+        title: const Text("Form"),
       ),
       body: Container(
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
         child: Form(
             key: _formkey,
             child: Column(
               children: [
                 TextFormField(
-                  decoration: InputDecoration(hintText: "Enter first name"),
-                  key: ValueKey("First Name"),
+                  decoration: const InputDecoration(hintText: "Enter first name"),
+                  key: const ValueKey("First Name"),
                   validator: (value) {
                     if (value.toString().isEmpty) {
                       return "First Name cannot be empty";
@@ -55,8 +57,8 @@ class Form_Widget extends StatelessWidget {
                   },
                 ),
                 TextFormField(
-                  decoration: InputDecoration(hintText: "Enter Last name"),
-                  key: ValueKey("Last Name"),
+                  decoration: const InputDecoration(hintText: "Enter Last name"),
+                  key: const ValueKey("Last Name"),
                   validator: (value) {
                     if (value.toString().isEmpty) {
                       return "Last Name cannot be empty";
@@ -69,8 +71,8 @@ class Form_Widget extends StatelessWidget {
                   },
                 ),
                 TextFormField(
-                  decoration: InputDecoration(hintText: "Enter E-mail name"),
-                  key: ValueKey("E-mail"),
+                  decoration: const InputDecoration(hintText: "Enter E-mail name"),
+                  key: const ValueKey("E-mail"),
                   validator: (value) {
                     if (value.toString().isEmpty) {
                       return "E-mail Name cannot be empty";
@@ -83,8 +85,8 @@ class Form_Widget extends StatelessWidget {
                   },
                 ),
                 TextFormField(
-                  decoration: InputDecoration(hintText: "Password"),
-                  key: ValueKey("Password"),
+                  decoration: const InputDecoration(hintText: "Password"),
+                  key: const ValueKey("Password"),
                   validator: (value) {
                     if (value.toString().length <= 5) {
                       return "password cannot less than 5 characters";
@@ -101,7 +103,7 @@ class Form_Widget extends StatelessWidget {
                     onPressed: () {
                       trySubmit();
                     },
-                    child: Text("submit")),
+                    child: const Text("submit")),
               ],
             )),
       ),

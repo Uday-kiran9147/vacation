@@ -7,7 +7,7 @@ import 'class.dart';
 class MyAp extends StatelessWidget {
   MyAp({super.key});
   User obj =
-      new User(name: "uday kiran", age: 20, email: "Udaykiran91@gmail.com");
+      User(name: "uday kiran", age: 20, email: "Udaykiran91@gmail.com");
 
   String jsondata =
       // while writing json files through keyboard do not pass int as a string format
@@ -31,8 +31,8 @@ class MyAp extends StatelessWidget {
                     var json = jsonEncode(map); //converts map into json
                     print(json); // endoded to json
                   },
-                  child: Text("serialization")),
-              SizedBox(
+                  child: const Text("serialization")),
+              const SizedBox(
                 width: 20,
               ),
               ElevatedButton(
@@ -42,7 +42,7 @@ class MyAp extends StatelessWidget {
                     User.fromMap(mapp);
                     print(mapp.toString()); // decoded JSON ---> Object
                   },
-                  child: Text("De-serialization"))
+                  child: const Text("De-serialization"))
             ],
           ),
         ),

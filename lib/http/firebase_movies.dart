@@ -1,4 +1,3 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class Movies extends StatefulWidget {
@@ -20,9 +19,10 @@ class _MoviesState extends State<Movies> {
     return Scaffold(
       appBar: AppBar(),
       body: FutureBuilder(
+        future:null ,
         builder: (context, snapshot) => ListView.builder(
           itemBuilder: (context, index) {
-            return Card(
+            return const Card(
               child: ListTile(),
             );
           },

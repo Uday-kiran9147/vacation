@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class List_Grid extends StatelessWidget {
   const List_Grid({super.key});
@@ -71,7 +69,7 @@ class List_Grid extends StatelessWidget {
     };
     return Scaffold(
       appBar: AppBar(
-        title: Text("List View And Grid View"),
+        title: const Text("List View And Grid View"),
       ),
         backgroundColor: Colors.black,
         body:
@@ -88,7 +86,7 @@ class List_Grid extends StatelessWidget {
             GridView.builder(
               itemCount: 4*40,
           gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount
+              const SliverGridDelegateWithFixedCrossAxisCount
               
               (
                 crossAxisSpacing: 20,
@@ -96,7 +94,7 @@ class List_Grid extends StatelessWidget {
                 childAspectRatio: 2/3,
                 crossAxisCount: 4),
           itemBuilder: (context, index) {
-            return Card(
+            return const Card(
               child: Center(child: Text("qwerty")),
             );
           },
