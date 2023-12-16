@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Container_sizedBox extends StatelessWidget {
   const Container_sizedBox({super.key});
@@ -13,12 +11,12 @@ class Container_sizedBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Container and Sized Box"),
+        title: const Text("Container and Sized Box"),
         backgroundColor: Colors.black,
       ),
       body: Center(
         child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 boxShadow: [
                   BoxShadow(
                       blurRadius: 30, spreadRadius: 5, color: Colors.black)
@@ -34,7 +32,7 @@ class Container_sizedBox extends StatelessWidget {
             // padding: EdgeInsets.all(8),
             child: Center(
                 child: Container(
-              margin: EdgeInsets.all(20),  //
+              margin: const EdgeInsets.all(20),  //
 
               // height: 12,
               color: Colors.amber,

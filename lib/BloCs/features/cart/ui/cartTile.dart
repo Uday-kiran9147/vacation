@@ -6,7 +6,7 @@ import 'package:vacationvproject/BloCs/features/home/ui/models/homeproductdata.d
 import '../bloc/cart_bloc_bloc.dart';
 
 class CartItem extends StatelessWidget {
-  CartItem({
+  const CartItem({
     Key? key,
     required this.productDataModel,
     required this.cartBloc,
@@ -18,8 +18,8 @@ class CartItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(color: Colors.teal)),
@@ -35,7 +35,7 @@ class CartItem extends StatelessWidget {
         const SizedBox(height: 20),
         Text(
           productDataModel.name,
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         Text(
           productDataModel.description,
@@ -45,7 +45,7 @@ class CartItem extends StatelessWidget {
           children: [
             Text(
               "\$${productDataModel.price}",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             Row(
               children: [
@@ -54,16 +54,16 @@ class CartItem extends StatelessWidget {
                       // cartBloc.add(HomeProductWishlistButtonClickedEvent(
                       //     clickedProduct: productDataModel));
                     },
-                    icon: Icon(Icons.favorite_border_outlined)),
+                    icon: const Icon(Icons.favorite_border_outlined)),
                 IconButton(
                     onPressed: () {
                       cartBloc.add(CartRemoveFromCartEvent(selectedItemToRemove: productDataModel));
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         content: Text("${productDataModel.name} removed from cart"),
-                        duration: Duration(seconds: 1),
+                        duration: const Duration(seconds: 1),
                       ));
                     },
-                    icon: Icon(Icons.shopping_cart))
+                    icon: const Icon(Icons.shopping_cart))
               ],
             ),
           ],

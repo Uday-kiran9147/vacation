@@ -1,5 +1,4 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:fancy_containers/fancy_containers.dart';
 import 'package:flutter/material.dart';
 
 class GymStore extends StatelessWidget {
@@ -15,17 +14,17 @@ class GymStore extends StatelessWidget {
             backgroundColor: Colors.pink,
             actions: [
               IconButton(
-                icon: Icon(Icons.ring_volume),
+                icon: const Icon(Icons.ring_volume),
                 onPressed: () {},
               ),
               IconButton(
-                icon: Icon(Icons.shopping_cart),
+                icon: const Icon(Icons.shopping_cart),
                 onPressed: () {},
               )
             ],
-            title: Text('Gym Store'),
+            title: const Text('Gym Store'),
           ),
-          body: SingleChildScrollView(
+          body: const SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -56,7 +55,7 @@ class GymStore extends StatelessWidget {
             ),
           ),
           bottomNavigationBar:
-              BottomNavigationBar(enableFeedback: true, items: [
+              BottomNavigationBar(enableFeedback: true, items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.feed),
                 label: 'feed',
@@ -79,7 +78,7 @@ class GymStore extends StatelessWidget {
 }
 
 class DecoratedContainer extends StatelessWidget {
-  DecoratedContainer({
+  const DecoratedContainer({
     Key? key,
     this.URL,
     required this.text,
@@ -91,7 +90,7 @@ class DecoratedContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           boxShadow: [BoxShadow(color: Colors.white, blurRadius: 12)],
           color: Colors.cyan,
           borderRadius: BorderRadius.all(Radius.circular(10))),
@@ -100,8 +99,17 @@ class DecoratedContainer extends StatelessWidget {
       child: Stack(
         children: [
           Container(
+            decoration: const BoxDecoration(
+                gradient: LinearGradient(colors: [
+                  Colors.purple,
+                  Colors.red,
+                ]),
+                boxShadow: [BoxShadow(color: Colors.white)],
+                color: Colors.red,
+                borderRadius: BorderRadius.all(Radius.circular(20))),
+            width: double.infinity,
             child: ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
                 child: URL == null
                     ? Image.asset(
                         'assets/ui.jpeg',
@@ -111,22 +119,13 @@ class DecoratedContainer extends StatelessWidget {
                         URL!,
                         fit: BoxFit.cover,
                       )),
-            decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [
-                  Colors.purple,
-                  Colors.red,
-                ]),
-                boxShadow: [BoxShadow(color: Colors.white)],
-                color: Colors.red,
-                borderRadius: BorderRadius.all(Radius.circular(20))),
-            width: double.infinity,
           ),
           Positioned(
               bottom: 30,
               left: 20,
               child: Text(
                 text,
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.white,
                     fontSize: 22,
                     fontWeight: FontWeight.bold),

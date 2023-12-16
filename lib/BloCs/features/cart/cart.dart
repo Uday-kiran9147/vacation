@@ -23,7 +23,7 @@ class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Cart')),
+      appBar: AppBar(title: const Text('Cart')),
       body: BlocConsumer<CartBloc, CartState>(
         bloc: cartBloc,
         listener: (context, state) {},
@@ -46,7 +46,7 @@ class _CartPageState extends State<CartPage> {
               // return SizedBox(
               //     child: Center(child: CircularProgressIndicator()));
           }
-          return SizedBox(
+          return const SizedBox(
                   );
 
         },

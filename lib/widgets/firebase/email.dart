@@ -19,16 +19,16 @@ class _EmailAuthenticationState extends State<EmailAuthentication> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Email Authentication")),
+      appBar: AppBar(title: const Text("Email Authentication")),
       body: Form(
         key: _formkey,
         child: Container(
-          padding: EdgeInsets.all(14),
+          padding: const EdgeInsets.all(14),
           child: ListView(
             children: [
               TextFormField(
-                key: ValueKey('email'),
-                decoration: InputDecoration(hintText: "Enter email"),
+                key: const ValueKey('email'),
+                decoration: const InputDecoration(hintText: "Enter email"),
                 validator: (value) {
                   if (!value.toString().contains('@')) {
                     return "Email is InValid";
@@ -43,8 +43,8 @@ class _EmailAuthenticationState extends State<EmailAuthentication> {
                 },
               ),
               TextFormField(
-                key: ValueKey('password'),
-                decoration: InputDecoration(hintText: "Enter password"),
+                key: const ValueKey('password'),
+                decoration: const InputDecoration(hintText: "Enter password"),
                 obscureText: true,
                 validator: (value) {
                   if (value.toString().length < 5) {
@@ -60,8 +60,8 @@ class _EmailAuthenticationState extends State<EmailAuthentication> {
                 },
               ),
               TextFormField(
-                key: ValueKey('username'),
-                decoration: InputDecoration(hintText: "Enter username"),
+                key: const ValueKey('username'),
+                decoration: const InputDecoration(hintText: "Enter username"),
                 validator: (value) {
                   if (value.toString().length < 3) {
                     return "user name is Small";
@@ -86,7 +86,7 @@ class _EmailAuthenticationState extends State<EmailAuthentication> {
                         Signup(email, password);
                       }
                     },
-                    child: Text("submit")),
+                    child: const Text("submit")),
               ),
               TextButton(
                   onPressed: () {
@@ -95,8 +95,8 @@ class _EmailAuthenticationState extends State<EmailAuthentication> {
                     });
                   },
                   child: isLogin
-                      ? Text("Don't Have an Account?")
-                      : Text("Already Signed Up? Login"))
+                      ? const Text("Don't Have an Account?")
+                      : const Text("Already Signed Up? Login"))
             ],
           ),
         ),

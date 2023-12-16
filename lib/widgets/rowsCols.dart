@@ -5,11 +5,11 @@ class RowsCOls extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var W = MediaQuery.of(context).size.width;
-    var H = MediaQuery.of(context).size.height;
+    // var W = MediaQuery.of(context).size.width;
+    // var H = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: Text("rows and columns"),
+        title: const Text("rows and columns"),
       ),
       body: Container(
         height: 250,

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class AlerDialog_Widget extends StatelessWidget {
   const AlerDialog_Widget({super.key});
@@ -8,11 +6,11 @@ class AlerDialog_Widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("AlerDialog_Widget")),
+      appBar: AppBar(title: const Text("AlerDialog_Widget")),
       body: Container(
           child: Center(
         child: ElevatedButton(
-          child: Text("Elevated Button"),
+          child: const Text("Elevated Button"),
           onPressed: () {
             _showAlerDialog(context);
           },
@@ -33,7 +31,7 @@ Future<void> _showAlerDialog(BuildContext context) {
           actions: [
             TextButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "Allow",
                   style: TextStyle(color: Colors.black),
                 )),
@@ -41,10 +39,10 @@ Future<void> _showAlerDialog(BuildContext context) {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text("Deny", style: TextStyle(color: Colors.black)))
+                child: const Text("Deny", style: TextStyle(color: Colors.black)))
           ],
-          title: Text("This is alert dialog"),
-          content: SingleChildScrollView(
+          title: const Text("This is alert dialog"),
+          content: const SingleChildScrollView(
             //Alet dialog Must be written in a Scrollable View(SingleChildScrollView)
             child: ListBody(
               children: [

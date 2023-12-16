@@ -20,14 +20,14 @@ class RandomUI extends StatelessWidget {
                   ),
                   Container(
                     height: h / 2 - 30,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: Colors.blueAccent,
                         image: DecorationImage(
                           image: AssetImage('assets/ui.jpeg'),
                           fit: BoxFit.cover,
                         )),
                   ),
-                  Positioned(
+                  const Positioned(
                       bottom: 10,
                       right: 25,
                       child: CircleAvatar(
@@ -39,22 +39,22 @@ class RandomUI extends StatelessWidget {
                 ],
               ),
               Container(
-                padding: EdgeInsets.all(10),
-                child: Text(
+                padding: const EdgeInsets.all(10),
+                child: const Text(
                   "DataBase is the collection of interrelated data and set of programs to access data",
                   style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
                 ),
               ),
               Container(
                 // padding: EdgeInsets.all(0),
-                child: Text(
+                child: const Text(
                   "DataBase is the collection of interrelated data and set of  ",
                   style: TextStyle(
                     fontSize: 27 / 2,
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Container(
@@ -67,9 +67,9 @@ class RandomUI extends StatelessWidget {
                       Rowwidget("20", Icons.follow_the_signs),
                     ]),
               ),
-              Divider(),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Divider(),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   "Now is the winter of our discontent Made glorious summer by this sun of York; And all the clouds that lour'd upon our house In the deep bosom of the ocean buried. Now are our brows bound with victorious wreaths; Our bruised arms hung up for monuments; Our stern alarums changed to merry meetings,",
                   style: TextStyle(fontSize: 15),

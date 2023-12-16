@@ -34,16 +34,16 @@ class _HomeState extends State<Home> {
       listener: (context, state) {
         if (state is HomeNavigateToCartPageActionState) {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => CartPage()));
+              context, MaterialPageRoute(builder: (context) => const CartPage()));
         } else if (state is HomeNavigateToWishlistPageActionState) {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => WishlistPage()));
+              context, MaterialPageRoute(builder: (context) => const WishlistPage()));
         } else if (state is HomeProductItemWishlistedActionState) {
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
             content: Text('Product added to Wishlist'),
           ));
         } else if (state is HomeProductItemCartedActionState) {
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
             duration: Duration(seconds: 1),
             content: Text('Product added to Cart'),
           ));
@@ -52,7 +52,7 @@ class _HomeState extends State<Home> {
       builder: (context, state) {
         switch (state.runtimeType) {
           case HomeLoadingState:
-            return Scaffold(
+            return const Scaffold(
               body: Center(child: CircularProgressIndicator()),
             );
             // break;
@@ -61,27 +61,27 @@ class _HomeState extends State<Home> {
             return Scaffold(
               appBar: AppBar(
                 backgroundColor: Colors.blueGrey,
-                title: Text('Uday\'s Grocery'),
+                title: const Text('Uday\'s Grocery'),
                 actions: [
                   IconButton(
                       onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => WishlistPage()));
+                                builder: (context) => const WishlistPage()));
                         homeBloc.add(HomeWishlistButtonNavigateEvent());
                       },
-                      icon: Icon(Icons.favorite_border)),
+                      icon: const Icon(Icons.favorite_border)),
                   IconButton(
                       onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => CartPage()));
+                                builder: (context) => const CartPage()));
 
                         homeBloc.add(HomeCartButtonNavigateEvent());
                       },
-                      icon: Icon(Icons.shopping_bag_outlined)),
+                      icon: const Icon(Icons.shopping_bag_outlined)),
                 ],
               ),
               body: ListView.builder(
@@ -94,14 +94,14 @@ class _HomeState extends State<Home> {
             );
             break;
           case HomeErrorState:
-            return Scaffold(
+            return const Scaffold(
               body: Center(
                 child: Text('Error'),
               ),
             );
             break;
           default:
-            return SizedBox();
+            return const SizedBox();
         }
       },
     );

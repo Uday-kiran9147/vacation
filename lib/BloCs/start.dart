@@ -12,7 +12,7 @@ class BloCHome extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.teal),
-      home: Home(),
+      home: const Home(),
     );
   }
 }

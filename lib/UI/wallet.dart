@@ -19,18 +19,18 @@ class _WalletUIState extends State<WalletUI> {
         backgroundColor: Colors.redAccent,
         body: Stack(
           children: [
-            ATMCard(),
+            const ATMCard(),
 
             Container(
               height: 400, 
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Color.fromARGB(255, 38, 34, 34)),
             ),
             SingleChildScrollView(
               child: Column(
                 children: [
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Icon(size: 30, Icons.account_box),
@@ -44,43 +44,43 @@ class _WalletUIState extends State<WalletUI> {
                         "Wallets", style: GoogleFonts.poppins(),
                         // style: TextStyle(fontSize: 20, color: Colors.orange),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.add_circle,
                         color: Colors.orange,
                         size: 30,
                       )
                     ],
                   ),
-                  Row(
+                  const Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text('USD'),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text('GBP'),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text('IND'),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text('JOE'),
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Container(
                     height: 300,
                     width: 250,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: Colors.orange,
                         borderRadius: BorderRadius.all(Radius.circular(30))),
-                    child: WallerContainer(),
+                    child: const WallerContainer(),
                   ),
                   Text("Pending", style: GoogleFonts.poppins()),
                   Row(
@@ -90,7 +90,7 @@ class _WalletUIState extends State<WalletUI> {
                         child: Container(
                           height: 300 / 2,
                           width: 250 / 2,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               color: Colors.orange,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(30))),
@@ -101,7 +101,7 @@ class _WalletUIState extends State<WalletUI> {
                         child: Container(
                           height: 300 / 2,
                           width: 250 / 2,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               color: Colors.orange,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(30))),
@@ -127,7 +127,7 @@ class ATMCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(30)),
           gradient: LinearGradient(
               begin: Alignment.topLeft,
@@ -153,10 +153,10 @@ class WallerContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text("British Pounds", style: GoogleFonts.poppins()),
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
         Row(
@@ -164,14 +164,14 @@ class WallerContainer extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                   border: Border.all(width: 2, color: Colors.orangeAccent)),
-              child: Padding(
-                padding: const EdgeInsets.all(4.0),
+              child: const Padding(
+                padding: EdgeInsets.all(4.0),
                 child: Text("\$",
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Text("GBP",
@@ -179,7 +179,7 @@ class WallerContainer extends StatelessWidget {
                     fontSize: 20, fontWeight: FontWeight.bold)),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 70,
         ),
         Text("620.00", style: GoogleFonts.poppins(fontSize: 30)

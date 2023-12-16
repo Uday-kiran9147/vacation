@@ -13,12 +13,12 @@ class ImagePicker_Widget extends StatefulWidget {
 class _ImagePicker_WidgetState extends State<ImagePicker_Widget> {
   XFile? file;
   List<XFile>? files_list;
-  ImagePicker _picker = ImagePicker();
+  final ImagePicker _picker = ImagePicker();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Image-Picker"),
+        title: const Text("Image-Picker"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -29,7 +29,7 @@ class _ImagePicker_WidgetState extends State<ImagePicker_Widget> {
               color: Colors.grey,
               child: Center(
                   child: file == null
-                      ? Text("image is not picked")
+                      ? const Text("image is not picked")
                       : Image.file(fit: BoxFit.cover, File(file!.path)))),
           ElevatedButton(
               onPressed: () async {
@@ -42,10 +42,10 @@ class _ImagePicker_WidgetState extends State<ImagePicker_Widget> {
                 print(" Image picked");
                 print(file!.path);
               },
-              child: Text("Pick Image")),
+              child: const Text("Pick Image")),
           ElevatedButton(
               onPressed: () async {
-                final List<XFile>? photolist = await _picker.pickMultiImage();
+                final List<XFile> photolist = await _picker.pickMultiImage();
                 setState(() {
                   files_list = photolist;
                 });
@@ -56,7 +56,7 @@ class _ImagePicker_WidgetState extends State<ImagePicker_Widget> {
                 }
                 // print(file!.path);
               },
-              child: Text("Pick Multiple Images"))
+              child: const Text("Pick Multiple Images"))
         ],
       ),
     );

@@ -19,7 +19,7 @@ class SnackBar_widget extends StatelessWidget {
                   onPressed: () => {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (BuildContext context) {
-                      return Buttons();
+                      return const Buttons();
                     }))
                   },
                 ),
@@ -27,12 +27,12 @@ class SnackBar_widget extends StatelessWidget {
                 behavior: SnackBarBehavior.floating,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
-                duration: Duration(milliseconds: 3000),
+                duration: const Duration(milliseconds: 3000),
                 backgroundColor: Colors.green,
-                content: Text("This is a snack bar")),
+                content: const Text("This is a snack bar")),
             ScaffoldMessenger.of(context).showSnackBar(snack_bar),
           },
-          child: Text("Snack bar"),
+          child: const Text("Snack bar"),
         ),
       )),
     );

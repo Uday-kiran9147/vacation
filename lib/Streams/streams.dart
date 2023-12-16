@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class StreamsExample extends StatefulWidget {
-  StreamsExample({super.key});
+  const StreamsExample({super.key});
 
   @override
   State<StreamsExample> createState() => _StreamsExampleState();
@@ -11,11 +11,11 @@ class StreamsExample extends StatefulWidget {
 
 class _StreamsExampleState extends State<StreamsExample> {
   // stream controller
-  StreamController<String> _streamController = new StreamController<String>();
+  final StreamController<String> _streamController = StreamController<String>();
 
   // for multiple streambuilders we need to use broadcast stream
   late Stream<String> _stream;
-  TextEditingController _textEditingController = TextEditingController();
+  final TextEditingController _textEditingController = TextEditingController();
   @override
   void initState() {
     super.initState();
@@ -28,14 +28,14 @@ class _StreamsExampleState extends State<StreamsExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Streams Example'),
+        title: const Text('Streams Example'),
       ),
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text('Streams', style: TextStyle(fontWeight: FontWeight.bold)),
-          SizedBox(
+          const Text('Streams', style: TextStyle(fontWeight: FontWeight.bold)),
+          const SizedBox(
             height: 100,
           ),
           Row(
@@ -48,9 +48,9 @@ class _StreamsExampleState extends State<StreamsExample> {
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
                     return Text(snapshot.data ?? "No input data",
-                        style: TextStyle(fontWeight: FontWeight.bold));
+                        style: const TextStyle(fontWeight: FontWeight.bold));
                   }
-                  return Text(
+                  return const Text(
                     "No data",
                   );
                 },
@@ -62,16 +62,16 @@ class _StreamsExampleState extends State<StreamsExample> {
                   if (snapshot.hasData) {
                     return Text(
                       snapshot.data.toString(),
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontWeight: FontWeight.bold),
                     );
                   } else {
-                    return Text('No data');
+                    return const Text('No data');
                   }
                 },
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 100,
           ),
           StreamBuilder(
@@ -80,10 +80,10 @@ class _StreamsExampleState extends State<StreamsExample> {
               if (snapshot.hasData) {
                 return Text(
                   snapshot.data.toString(),
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 );
               } else {
-                return Text('No data');
+                return const Text('No data');
               }
             },
           ),
@@ -103,7 +103,7 @@ class _StreamsExampleState extends State<StreamsExample> {
                   _streamController.sink.add(_textEditingController.text);
                   // print(_textEditingController.text);
                 },
-                child: Text('submit')),
+                child: const Text('submit')),
           )
         ],
       )),

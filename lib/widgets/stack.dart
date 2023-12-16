@@ -13,7 +13,7 @@ class _Stack_WidgetState extends State<Stack_Widget> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(title: Text("Stack")),
+        appBar: AppBar(title: const Text("Stack")),
         body: Container(
           // color:Colors.cyan,
           child: Center(

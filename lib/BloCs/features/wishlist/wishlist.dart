@@ -23,7 +23,7 @@ class _WishlistPageState extends State<WishlistPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Wishlist'),
+        title: const Text('Wishlist'),
       ),
       body: BlocConsumer<WishlistBloc, WishlistState>(
         bloc: wishlistBloc,
@@ -44,7 +44,7 @@ class _WishlistPageState extends State<WishlistPage> {
 
             default:
           }
-          return SizedBox(
+          return const SizedBox(
             child: CircularProgressIndicator(),
           );
         },

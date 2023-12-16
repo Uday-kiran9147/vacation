@@ -25,11 +25,13 @@ class ProviderHome extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home: MyHomePage()));
+            home: const MyHomePage()));
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
   // const MyHomePage({super.key, required this.title});
 
   @override
@@ -59,9 +61,9 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => Second()));
+                        MaterialPageRoute(builder: (context) => const Second()));
                   },
-                  child: Text("first"))
+                  child: const Text("first"))
             ],
           ),
         ),

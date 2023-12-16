@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Buttons extends StatelessWidget {
   const Buttons({super.key});
@@ -9,7 +7,7 @@ class Buttons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Elevated and TextButton"),
+        title: const Text("Elevated and TextButton"),
       ),
       backgroundColor: Colors.white,
       body: Column(
@@ -18,11 +16,11 @@ class Buttons extends StatelessWidget {
           Center(
             child: TextButton(
               style: ButtonStyle(
-                  padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                  padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
                   overlayColor: MaterialStateProperty.all(Colors.deepPurple),
                   backgroundColor: MaterialStateProperty.all(Colors.green),
                   elevation: MaterialStateProperty.all(10)),
-              child: Text(
+              child: const Text(
                 "TextButton",  // we can design textButton as a ElevatedButton by decorating.
                 style: TextStyle(color: Colors.black, fontSize: 20),
               ),
@@ -30,7 +28,7 @@ class Buttons extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.all(20),
+            margin: const EdgeInsets.all(20),
             height: 50,
             width: 200,
             child: ElevatedButton(
@@ -38,7 +36,7 @@ class Buttons extends StatelessWidget {
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(40)))),
                 onPressed: (() => {}),
-                child: Text(
+                child: const Text(
                   "Elevated Button",
                   style: TextStyle(color: Colors.black),
                 )),

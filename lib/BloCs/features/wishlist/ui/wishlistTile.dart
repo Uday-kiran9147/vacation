@@ -6,7 +6,7 @@ import 'package:vacationvproject/BloCs/features/wishlist/bloc/wishlist_bloc_bloc
 
 
 class WishlistItem extends StatelessWidget {
-  WishlistItem({
+  const WishlistItem({
     Key? key,
     required this.productDataModel,
     required this.wishlistBloc,
@@ -18,8 +18,8 @@ class WishlistItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(color: Colors.teal)),
@@ -35,7 +35,7 @@ class WishlistItem extends StatelessWidget {
         const SizedBox(height: 20),
         Text(
           productDataModel.name,
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         Text(
           productDataModel.description,
@@ -45,7 +45,7 @@ class WishlistItem extends StatelessWidget {
           children: [
             Text(
               "\$${productDataModel.price}",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             Row(
               children: [
@@ -53,12 +53,12 @@ class WishlistItem extends StatelessWidget {
                     onPressed: () {
                  wishlistBloc.add(WishlistremoveFromListEvent(selectedItemToRemove: productDataModel));
                     },
-                    icon: Icon(Icons.favorite)),
+                    icon: const Icon(Icons.favorite)),
                 IconButton(
                     onPressed: () {
                       
                     },
-                    icon: Icon(Icons.shopping_cart))
+                    icon: const Icon(Icons.shopping_cart))
               ],
             ),
           ],

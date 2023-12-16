@@ -13,8 +13,8 @@ class TabBar_Widget extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.grey,
-          title: Text("Tab Bar "),
-          bottom: TabBar(
+          title: const Text("Tab Bar "),
+          bottom: const TabBar(
             // isScrollable: true,
             //height of indicator
             indicatorWeight: 5,
@@ -67,7 +67,7 @@ class TabBar_Widget extends StatelessWidget {
         ),
         body: TabBarView(children: [
           Container(
-            child: Center(
+            child: const Center(
               child: Text(
                 "Camera",
                 style: TextStyle(fontSize: 40, color: Colors.green),
@@ -75,7 +75,7 @@ class TabBar_Widget extends StatelessWidget {
             ),
           ),
           Container(
-            child: Center(
+            child: const Center(
               child: Text(
                 "CHARTS",
                 style: TextStyle(fontSize: 40, color: Colors.green),
@@ -83,7 +83,7 @@ class TabBar_Widget extends StatelessWidget {
             ),
           ),
           Container(
-            child: Center(
+            child: const Center(
               child: Text(
                 "STATUS",
                 style: TextStyle(fontSize: 40, color: Colors.green),
@@ -91,7 +91,7 @@ class TabBar_Widget extends StatelessWidget {
             ),
           ),
           Container(
-            child: Center(
+            child: const Center(
               child: Text(
                 "CALLS",
                 style: TextStyle(fontSize: 40, color: Colors.green),

@@ -7,7 +7,7 @@ class AnimatedText_Widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("AlerDialog_Widget")),
+      appBar: AppBar(title: const Text("AlerDialog_Widget")),
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -17,13 +17,13 @@ class AnimatedText_Widget extends StatelessWidget {
   //-------To Access this animations We Have To Add Dependency(animated_text_kit: ^4.2.2)---------//
           AnimatedTextKit(
             totalRepeatCount: 4,
-            pause: Duration(milliseconds: 200),
+            pause: const Duration(milliseconds: 200),
             displayFullTextOnTap: true,
             stopPauseOnTap: true,
             animatedTexts: [
               TypewriterAnimatedText("Uday Kiran",
-                  speed: Duration(milliseconds: 500),
-                  textStyle: TextStyle(
+                  speed: const Duration(milliseconds: 500),
+                  textStyle: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
                     color: Colors.deepPurpleAccent
@@ -32,13 +32,13 @@ class AnimatedText_Widget extends StatelessWidget {
           ),
           AnimatedTextKit(
             totalRepeatCount: 4,
-            pause: Duration(milliseconds: 200),
+            pause: const Duration(milliseconds: 200),
             displayFullTextOnTap: true,
             stopPauseOnTap: true,
             animatedTexts: [
               RotateAnimatedText(
                 "HELLO",
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.orange,
                   fontSize: 30,
@@ -46,14 +46,14 @@ class AnimatedText_Widget extends StatelessWidget {
               ),
               RotateAnimatedText(
                 "BEAUTIFULL",
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 30,
                     color: Colors.blue),
               ),
               RotateAnimatedText(
                 "BIRD",
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 30,
                     color: Colors.green),
@@ -63,12 +63,12 @@ class AnimatedText_Widget extends StatelessWidget {
           AnimatedTextKit(
             animatedTexts: [
               WavyAnimatedText("HELLO USER  UDAY",
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 30,
                       color: Colors.pinkAccent)),
               WavyAnimatedText("HAVE A NICE DAY",
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 30,
                       color: Colors.blue)),
