@@ -21,17 +21,18 @@ import 'package:vacationvproject/workingAPI/apiscreen.dart';
 
 import 'STATE/state-main.dart';
 import 'UI/gymstore.dart';
+import 'UI/phonePe/phonePe.dart';
 import 'widgets/firebase/email.dart';
 import 'widgets/geolocator.dart';
 import 'widgets/stack.dart';
 import 'widgets/tabbar.dart';
 
 void main() async {
-  runApp(const MaterialApp(
+  runApp( MaterialApp(
       debugShowCheckedModeBanner: false,
       // theme:
       //     ThemeData(brightness: Brightness.light, primaryColor: Colors.cyan),
-
+    theme: ThemeData(iconTheme: IconThemeData(color: Colors.white)),
       home: MyApp()));
 }
 
@@ -87,6 +88,7 @@ class HomeScreen extends StatelessWidget {
               _buildNavigationButton(context, 'Streams', const StreamsExample()),
               _buildNavigationButton(context, 'Wallet ui', const WalletUI()),
               _buildNavigationButton(context, 'BloC', const BloCHome()),
+              _buildNavigationButton(context, 'PhonePe',  PhonePeHome()),
             ],
           ),
         ),
