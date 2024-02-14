@@ -16,7 +16,7 @@ class RechargeAndPayBills extends StatelessWidget {
   Widget build(BuildContext context) {
     return HomeContainer(
         height: size.height * 0.30,
-        child:const Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -37,38 +37,38 @@ class RechargeAndPayBills extends StatelessWidget {
             ),
     
             Wrap(
-              spacing: 10.0,
+              spacing: 10.0,runSpacing: 15,
               direction: Axis.horizontal,
               children: [
-                Picon(
+                Picon(size: size,
                   text: 'Recharge',
                   icon: Icons.phone_android,
                 ),
-                Picon(
+                Picon(size: size,
                   text: 'Electricity',
                   icon: Icons.electrical_services,
                 ),
-                Picon(
+                Picon(size: size,
                   text: 'DTH',
                   icon: Icons.tv,
                 ),
-                Picon(
+                Picon(size: size,
                   text: 'Credit Card',
                   icon: Icons.credit_card,
                 ),
-                Picon(
+                Picon(size: size,
                   text: 'Recharge',
                   icon: Icons.phone_android,
                 ),
-                Picon(
+                Picon(size: size,
                   text: 'Electricity',
                   icon: Icons.electrical_services,
                 ),
-                Picon(
+                Picon(size: size,
                   text: 'DTH',
                   icon: Icons.tv,
                 ),
-                Picon(
+                Picon(size: size,
                   text: 'Credit Card',
                   icon: Icons.credit_card,
                 ),

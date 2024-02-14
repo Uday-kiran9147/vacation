@@ -19,7 +19,7 @@ class HomeBanner extends StatelessWidget {
       //   'https://miro.medium.com/v2/resize:fit:1200/1*t-4WaJBkKPc2f3FP_1_QQw.png',
       //   fit: BoxFit.cover,
       // ),
-      color: Colors.transparent,
+      color: Colors.grey.shade50,
       child: CarouselSlider(
           disableGesture: true,
           items: [
@@ -33,14 +33,14 @@ class HomeBanner extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.all(Radius.circular(12)),
               child: Image.network(
-                'https://miro.medium.com/v2/resize:fit:1200/1*t-4WaJBkKPc2f3FP_1_QQw.png',
+                'https://miro.medium.com/v2/resize:fit:1400/1*B2YiarrQLe1sjIi-2OY-Tg.png',
                 fit: BoxFit.cover,
               ),
             ),
             ClipRRect(
               borderRadius: BorderRadius.all(Radius.circular(12)),
               child: Image.network(
-                'https://miro.medium.com/v2/resize:fit:1200/1*t-4WaJBkKPc2f3FP_1_QQw.png',
+                'https://miro.medium.com/v2/resize:fit:1358/1*prATQ_SvBgGAdBPx1F8PjQ.jpeg',
                 fit: BoxFit.cover,
               ),
             ),
@@ -55,7 +55,7 @@ class HomeBanner extends StatelessWidget {
           options: CarouselOptions(
             height: 400,
             aspectRatio: 16 / 9,
-            viewportFraction: 0.82,
+            viewportFraction: 0.999,
             initialPage: 0,
             enableInfiniteScroll: true,
             reverse: false,

@@ -23,9 +23,9 @@ class HomeContainer extends StatelessWidget {
     return Container(
       height: height,
       width:width?? double.infinity,
-      child: child,
-      decoration:
-          BoxDecoration(color:color?? Colors.white, borderRadius: borderRadius),
+      child: Card( color:color?? Colors.white,child: child,),
+      // decoration:
+      //     BoxDecoration(color:color?? Colors.white, borderRadius: borderRadius),
     );
   }
 }

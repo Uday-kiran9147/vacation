@@ -20,30 +20,32 @@ class TransferMoney extends StatelessWidget {
   Widget build(BuildContext context) {
     return HomeContainer(
       height: size.height * 0.18,
-      child:const Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      
+      child: Column(//direction: Axis.vertical,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ComponentHeader(title: "  Transfer Money"),
+          ComponentHeader(title: "   Transfer Money"),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Expanded(
-                  child: Picon(
+                  child: Picon(size: size,
                 icon: Icons.person_outline_sharp,
                 text: 'To Mobile\nNumber',
               )),
               Expanded(
-                  child: Picon(
+                  child: Picon(size: size,
                 icon: Icons.home,
                 text: 'To Bank/\nUPI ID',
               )),
               Expanded(
-                  child: Picon(
+                  child: Picon(size: size,
                 icon: Icons.reset_tv_sharp,
                 text: 'To Self\nAccount',
               )),
               Expanded(
-                  child: Picon(
+                  child: Picon(size: size,
                 icon: Icons.account_balance_outlined,
                 text: 'Check\nBalance',
               )),

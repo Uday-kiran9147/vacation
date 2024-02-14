@@ -103,30 +103,26 @@ class HomeP extends StatelessWidget {
     return Container(
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(2.0),
           child: Flex(
             direction: Axis.vertical,
             children: [
               HomeBanner(size: size),
-              SizedBox(
-                height: 10,
-              ),
+
               TransferMoney(size: size),
-              SizedBox(
-                height: 10,
-              ),
+
               ReceiveMoney(),
-              SizedBox(
-                height: 10,
-              ),
+              // SizedBox(
+              //   height: 10,
+              // ),
               Wallet_Reward_Refer(size: size),
-              SizedBox(
-                height: 10,
-              ),
+              // SizedBox(
+              //   height: 10,
+              // ),
               AppsByPhonePe(size: size),
-              SizedBox(
-                height: 10,
-              ),
+              // SizedBox(
+              //   height: 10,
+              // ),
               RechargeAndPayBills(size: size)
             ],
           ),

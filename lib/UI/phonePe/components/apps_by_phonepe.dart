@@ -25,7 +25,7 @@ class AppsByPhonePe extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                PiconRow(icon: Icons.paypal, title: "Phonepe\nBussiness"),
+                PiconRow(icon: Icons.paypal, title: "Phonepe\nBussiness",url: "https://play-lh.googleusercontent.com/DIj92f1Tkfxm8rOTqPhlMtGsz8bboRju5v2V5ykxdGfpIAN4kTbNFfgBxpcFt5nY3KQ",),
                 PiconRow(
                     icon: Icons.maps_home_work_outlined,
                     title: "PhonePe\nStocks & IPO"),
