@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vacationvproject/BloCs/start.dart';
+import 'package:vacationvproject/GoRouter/go_router_home.dart';
 import 'package:vacationvproject/Streams/streams.dart';
 import 'package:vacationvproject/UI/wallet.dart';
 import 'package:vacationvproject/widgets/Buttons.dart';
@@ -18,7 +20,7 @@ import 'package:vacationvproject/widgets/rowsCols.dart';
 import 'package:vacationvproject/widgets/snackbar.dart';
 import 'package:vacationvproject/widgets/ui.dart';
 import 'package:vacationvproject/workingAPI/apiscreen.dart';
-
+import 'dart:ui_web';
 import 'STATE/state-main.dart';
 import 'UI/gymstore.dart';
 import 'UI/phonePe/phonePe.dart';
@@ -28,12 +30,7 @@ import 'widgets/stack.dart';
 import 'widgets/tabbar.dart';
 
 void main() async {
-  runApp( MaterialApp(
-      debugShowCheckedModeBanner: false,
-      // theme:
-      //     ThemeData(brightness: Brightness.light, primaryColor: Colors.cyan),
-    theme: ThemeData(iconTheme: IconThemeData(color: Colors.white)),
-      home: MyApp()));
+  runApp( const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -89,6 +86,7 @@ class HomeScreen extends StatelessWidget {
               _buildNavigationButton(context, 'Wallet ui', const WalletUI()),
               _buildNavigationButton(context, 'BloC', const BloCHome()),
               _buildNavigationButton(context, 'PhonePe',  PhonePeHome()),
+              _buildNavigationButton(context, 'Go_Router', ProviderScope(child:  GoRouterApp())),
             ],
           ),
         ),
