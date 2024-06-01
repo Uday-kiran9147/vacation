@@ -1,3 +1,5 @@
+import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vacationvproject/BloCs/start.dart';
@@ -16,11 +18,12 @@ import 'package:vacationvproject/widgets/dropdownlist.dart';
 import 'package:vacationvproject/widgets/firebase/crudOperations.dart';
 import 'package:vacationvproject/widgets/form.dart';
 import 'package:vacationvproject/widgets/imagepicker.dart';
+import 'package:vacationvproject/widgets/line_chats.dart';
+import 'package:vacationvproject/widgets/network_request.dart';
 import 'package:vacationvproject/widgets/rowsCols.dart';
 import 'package:vacationvproject/widgets/snackbar.dart';
 import 'package:vacationvproject/widgets/ui.dart';
 import 'package:vacationvproject/workingAPI/apiscreen.dart';
-import 'dart:ui_web';
 import 'STATE/state-main.dart';
 import 'UI/gymstore.dart';
 import 'UI/phonePe/phonePe.dart';
@@ -28,7 +31,8 @@ import 'widgets/firebase/email.dart';
 import 'widgets/geolocator.dart';
 import 'widgets/stack.dart';
 import 'widgets/tabbar.dart';
-
+import 'websites/local_storage.dart';
+import 'widgets/graphs.dart';
 void main() async {
   runApp( const MyApp());
 }
@@ -60,6 +64,7 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              _buildNavigationButton(context, 'Line Chat',  LineCharts()),
               _buildNavigationButton(context, 'GymStore', const GymStore()),
               _buildNavigationButton(context, 'ProviderHome', const ProviderHome()),
               _buildNavigationButton(context, 'DataBase', const DataBase()),
@@ -87,6 +92,10 @@ class HomeScreen extends StatelessWidget {
               _buildNavigationButton(context, 'BloC', const BloCHome()),
               _buildNavigationButton(context, 'PhonePe',  PhonePeHome()),
               _buildNavigationButton(context, 'Go_Router', ProviderScope(child:  GoRouterApp())),
+              // _buildNavigationButton(context, 'Responsive', ResponsiveHome()),
+            //  if(!kIsWeb) _buildNavigationButton(context, 'Local storage',  LocalStorageDemo()),
+              _buildNavigationButton(context, 'Newwork request',  NetWorkRequest()),
+              _buildNavigationButton(context, 'Health chart',  HealthPage()),
             ],
           ),
         ),
@@ -95,12 +104,15 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _buildNavigationButton(BuildContext context, String screenName, Widget screenWidget) {
-    return InkWell(
-      child: Text(screenName),
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (_) => screenWidget,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ListTile(
+        title: Text(screenName),
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => screenWidget,
+          ),
         ),
       ),
     );

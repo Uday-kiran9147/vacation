@@ -26,6 +26,7 @@ class _Dismissible_WidgetState extends State<Dismissible_Widget> {
             itemCount: listname.length,
             itemBuilder: (context, index) {
               return Dismissible(
+                key: Key(listname[index]),
                 background: Container(
                     // child: Text('data'),
                     color: Colors.red),
@@ -45,7 +46,7 @@ class _Dismissible_WidgetState extends State<Dismissible_Widget> {
                         content: Text(listname[index])));
                   }
                 },
-                key: Key(listname[index]),
+                
                 child: Card(
                   margin: const EdgeInsets.all(5),
                   child: ListTile(

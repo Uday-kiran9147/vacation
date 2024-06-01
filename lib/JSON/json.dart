@@ -27,7 +27,7 @@ class MyAp extends StatelessWidget {
             children: [
               ElevatedButton(
                   onPressed: () {
-                    Map<String, dynamic> map = obj.tomap();
+                    Map<String, dynamic> map = obj.tomap(); 
                     var json = jsonEncode(map); //converts map into json
                     print(json); // endoded to json
                   },

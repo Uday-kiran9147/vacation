@@ -4,8 +4,7 @@ import 'package:vacationvproject/GoRouter/go_router_home.dart';
 
 class Screen1 extends StatelessWidget {
   const Screen1({super.key});
-  static Screen1 builder(BuildContext context, GoRouterState state) =>
-      Screen1();
+  static Screen1 builder(BuildContext context, GoRouterState state) => const Screen1();
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,7 @@ class Screen1 extends StatelessWidget {
         child: ActionChip(
             label: Text('Go to screen2'),
             onPressed: () {
-              context.push(RouteNames.screen2);
+              context.push(RouteNames.screen2,);
             }),
       ),
     );
